@@ -59,7 +59,9 @@ afin de tester le bon fonctionnement de l'appli, entré un article en stock et v
 Afin de verifier la persistence de la bdd, faites:  
 $docker stop cnttomcat17102  
 $docker stop db  
+
 puis  
+
 $docker start cnttomcat17102  
 $docker start db  
 et retourner verifier la présence des informations de la base de données dans l'appli (stock de chaussures entré precedement)
