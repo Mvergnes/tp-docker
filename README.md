@@ -9,8 +9,8 @@ Etape 7 correspond a comment push sur docker hub
 
 
 __Etape 1:__
-Creation de deux sous-dossier (sur la machine hote)
--> reptom
+Creation de deux sous-dossier (sur la machine hote)  
+-> reptom  
 -> reppos
 
 __Etape 2:__
@@ -18,8 +18,7 @@ telechargement des fichiers de l'appli via git clone
 
 
 __Etape 3:__
-Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs)
-à l'aide de la commande: vim Dockerfile (dans le repertoire souhaité)
+Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs) à l'aide de la commande: vim Dockerfile (dans le repertoire souhaité)
 
 	reptom/Dockerfile
 		FROM tomcat:8-jre8						/* Récupération image sur le hub la premiere fois (image de base pour fabriquer la notre)*/
@@ -54,7 +53,7 @@ $ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710
 /* on créer le conteneur cnttomcat17102, ont indique le port 8888:8080 et on lie avec la base de donnée du conteneur postgres a l'aide de --link db (db = nom du contructeur de posgres)*/
                     
 
-__Etape 6:__ test
+__Etape 6:__ test  
 Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp
 afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier ca presence.
 afin de verifier la persistence de la bdd, faites un 
