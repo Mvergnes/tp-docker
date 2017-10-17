@@ -8,9 +8,10 @@ Etape 7 correspond a comment push sur docker hub
 
 
 
-###Etape 1:###
-Creation de deux sous-dossier (sur la machine hote)	-> reptom
-							-> reppos
+Etape 1:
+Creation de deux sous-dossier (sur la machine hote)
+-> reptom
+-> reppos
 
 _Etape 2:_
 telechargement des fichiers de l'appli via git clone
@@ -35,8 +36,8 @@ _Etape 4:_
 Cette étape vas permettre de créer nos deux nouvelles images qui serviront pour nos constructeur, a partir des dockerfile créer précedement
 a l'aide de la commande docker build
 
-$ docker build -t postgres1710 .						/*-t indique un tag , l'image aura pour nom postgres1710 */
-$ docker build -t tomcat1710 . 							/*-t indique un tag , l'image aura pour nom tomcat1710 */
+$ docker build -t postgres1710 .						/* -t indique un tag , l'image aura pour nom postgres1710 */
+$ docker build -t tomcat1710 . 							/* -t indique un tag , l'image aura pour nom tomcat1710 */
 
 
 _Etape 5:_
@@ -44,7 +45,7 @@ Construction des conteneurs a partir des deux nouvelles images que l'ont vient d
 a l'aide de la commande docker run
 
 $ docker run -d --name db postgres1710						/* creation du conteneur nommé db a l'aide de l'image postgres1710
-$ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710		/*on créer le conteneur cnttomcat17102, ont indique le port 8888:8080 
+$ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710		/* on créer le conteneur cnttomcat17102, ont indique le port 8888:8080 
 										et on lie avec la base de donnée du conteneur postgres a l'aide de --link db 
 										(db = nom du contructeur de posgres)*/
                     
