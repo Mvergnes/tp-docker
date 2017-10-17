@@ -53,14 +53,15 @@ $ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710
                     
 
 __Etape 6:__ test  
-Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp
-afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier ca presence.
-afin de verifier la persistence de la bdd, faites un 
-$docker stop cnttomcat17102 
-$docker stop db 
-puis 
-$docker start cnttomcat17102
-$docker start db 
+Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp  
+afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier sa presence.  
+
+Afin de verifier la persistence de la bdd, faites:  
+$docker stop cnttomcat17102  
+$docker stop db  
+puis  
+$docker start cnttomcat17102  
+$docker start db  
 et retourner verifier la présence des informations de la base de données dans l'appli (stock de chaussures entré precedement)
 
 
