@@ -47,10 +47,10 @@ __Etape 5:__
 Construction des conteneurs a partir des deux nouvelles images que l'ont vient de creer
 a l'aide de la commande docker run
 
-$ docker run -d --name db postgres1710					
+$ docker run -d --name db postgres1710  				
 /* creation du conteneur nommé db a l'aide de l'image postgres1710
 
-$ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710
+$ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710  
 /* on créer le conteneur cnttomcat17102, ont indique le port 8888:8080 et on lie avec la base de donnée du conteneur postgres a l'aide de --link db (db = nom du contructeur de posgres)*/
                     
 
@@ -69,16 +69,16 @@ et retourner verifier la présence des informations de la base de données dans 
 
 __Etape 7:__ Upload image sur docker hub
 
-$ docker tag postgres1710:latest mvergnes/postgres1710:1.0			
+$ docker tag postgres1710:latest mvergnes/postgres1710:1.0  		
 /* Modification du Tag en vue de l'upload sur docker hub */
 
-$ docker tag tomcat1710:latest mvergnes/tomcat1710:1.0				
+$ docker tag tomcat1710:latest mvergnes/tomcat1710:1.0  			
 /* Modification du Tag en vue de l'upload sur docker hub */
 
-$ docker push mvergnes/tomcat1710:1.0
+$ docker push mvergnes/tomcat1710:1.0  
 /* push de l'image sur dockerhub */
 
-$ docker push mvergnes/tomcat1710:1.0
+$ docker push mvergnes/tomcat1710:1.0  
 /* push de l'image sur dockerhub */
 
 
