@@ -8,7 +8,7 @@ Etape 7 correspond a comment push sur docker hub
 
 
 
-_Etape 1:_
+###Etape 1:###
 Creation de deux sous-dossier (sur la machine hote)	-> reptom
 							-> reppos
 
