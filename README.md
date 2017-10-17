@@ -9,11 +9,13 @@ Etape 7 correspond a comment push sur docker hub
 
 __Etape 1:__
 Creation de deux sous-dossier (sur la machine hote)  
--> reptom  
--> reppos
+-> reptom   
+-> reppos  
 
 __Etape 2:__
-telechargement des fichiers de l'appli via git clone
+telechargement des fichiers de l'appli via git clone et les mettre dans les dossiers correspondant:  
+-> reptom (dbproject.war -> mettre le fichier dans ce dossier)  
+-> reppos (init-db.sql -> mettre le fichier dans ce dossier)
 
 
 __Etape 3:__
