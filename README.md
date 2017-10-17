@@ -36,11 +36,9 @@ __Etape 4:__
 Cette étape vas permettre de créer nos deux nouvelles images qui serviront pour nos constructeur, a partir des dockerfile créer précedement
 a l'aide de la commande docker build
 
-$ docker build -t postgres1710 .
-/* -t indique un tag , l'image aura pour nom postgres1710 */
+$ docker build -t postgres1710 .   /* -t indique un tag , l'image aura pour nom postgres1710 */
 
-$ docker build -t tomcat1710 .
-/* -t indique un tag , l'image aura pour nom tomcat1710 */
+$ docker build -t tomcat1710 .     /* -t indique un tag , l'image aura pour nom tomcat1710 */
 
 
 __Etape 5:__
