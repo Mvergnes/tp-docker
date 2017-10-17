@@ -8,16 +8,16 @@ Etape 7 correspond a comment push sur docker hub
 
 
 
-Etape 1:
+__Etape 1:__
 Creation de deux sous-dossier (sur la machine hote)
 -> reptom
 -> reppos
 
-_Etape 2:_
+__Etape 2:__
 telechargement des fichiers de l'appli via git clone
 
 
-_Etape 3:_
+__Etape 3:__
 Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs)
 à l'aide de la commande: vim Dockerfile (dans le repertoire souhaité)
 
@@ -32,7 +32,7 @@ Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs
 		VOLUME ["/var/lib/postgressql/data"]				/* Persistence des données de la base de données (on pourra le verifier a l'etape 6: test)*/
 
 
-_Etape 4:_
+__Etape 4:__
 Cette étape vas permettre de créer nos deux nouvelles images qui serviront pour nos constructeur, a partir des dockerfile créer précedement
 a l'aide de la commande docker build
 
@@ -43,7 +43,7 @@ $ docker build -t tomcat1710 .
 /* -t indique un tag , l'image aura pour nom tomcat1710 */
 
 
-_Etape 5:_
+__Etape 5:__
 Construction des conteneurs a partir des deux nouvelles images que l'ont vient de creer
 a l'aide de la commande docker run
 
@@ -54,7 +54,7 @@ $ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710
 /* on créer le conteneur cnttomcat17102, ont indique le port 8888:8080 et on lie avec la base de donnée du conteneur postgres a l'aide de --link db (db = nom du contructeur de posgres)*/
                     
 
-_Etape 6:_ test
+__Etape 6:__ test
 Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp
 afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier ca presence.
 afin de verifier la persistence de la bdd, faites un 
@@ -67,7 +67,7 @@ et retourner verifier la présence des informations de la base de données dans 
 
 
 
-_Etape 7:_ Upload image sur docker hub
+__Etape 7:__ Upload image sur docker hub
 
 $ docker tag postgres1710:latest mvergnes/postgres1710:1.0			
 /* Modification du Tag en vue de l'upload sur docker hub*/
