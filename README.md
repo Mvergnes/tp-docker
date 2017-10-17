@@ -4,12 +4,17 @@
 Avant propos:
 Les etapes 1 à 3 correspondent a la creation des images
 Les etapes 4 à 6 correspondent a la mise en place des containers et au test final
+Etape 7 correspond a comment push sur docker hub
+
+
+
 Etape 1 :
 Creation de deux sous-dossier (sur la machine hote)	-> reptom
 							-> reppos
 
 Etape 2:
 telechargement des fichiers de l'appli via git clone
+
 
 Etape 3:
 Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs)
@@ -43,11 +48,13 @@ $ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710		/*on cr
 										et on lie avec la base de donnée du conteneur postgres a l'aide de --link db 
 										(db = nom du contructeur de posgres)*/
                     
+
 Etape 6: test
 Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp
 afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier ca presence.
 afin de verifier la persistence de la bdd, faites un $docker stop cnttomcat17102 et $docker stop db puis $docker start cnttomcat17102 $docker start db et retourner verifier 
 la présence des informations de la base de données dans l'appli (stock de chaussures entré precedement)
+
 
 
 Etape 7: Upload image sur docker hub
