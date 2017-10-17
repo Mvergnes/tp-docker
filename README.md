@@ -36,9 +36,11 @@ __Etape 4:__
 Cette étape vas permettre de créer nos deux nouvelles images qui serviront pour nos constructeur, a partir des dockerfile créer précedement
 a l'aide de la commande docker build
 
-$ docker build -t postgres1710 .   /* -t indique un tag , l'image aura pour nom postgres1710 */
+$ docker build -t postgres1710 .  
+/* -t indique un tag , l'image aura pour nom postgres1710 */
 
-$ docker build -t tomcat1710 .     /* -t indique un tag , l'image aura pour nom tomcat1710 */
+$ docker build -t tomcat1710 .  
+/* -t indique un tag , l'image aura pour nom tomcat1710 */
 
 
 __Etape 5:__
@@ -68,16 +70,16 @@ et retourner verifier la présence des informations de la base de données dans 
 __Etape 7:__ Upload image sur docker hub
 
 $ docker tag postgres1710:latest mvergnes/postgres1710:1.0			
-/* Modification du Tag en vue de l'upload sur docker hub*/
+/* Modification du Tag en vue de l'upload sur docker hub */
 
 $ docker tag tomcat1710:latest mvergnes/tomcat1710:1.0				
-/* Modification du Tag en vue de l'upload sur docker hub*/
+/* Modification du Tag en vue de l'upload sur docker hub */
 
 $ docker push mvergnes/tomcat1710:1.0
-/*push de l'image sur dockerhub*/
+/* push de l'image sur dockerhub */
 
 $ docker push mvergnes/tomcat1710:1.0
-/*push de l'image sur dockerhub*/
+/* push de l'image sur dockerhub */
 
 
 
