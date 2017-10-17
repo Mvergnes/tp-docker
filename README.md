@@ -8,15 +8,15 @@ Etape 7 correspond a comment push sur docker hub
 
 
 
-Etape 1 :
+_Etape 1:_
 Creation de deux sous-dossier (sur la machine hote)	-> reptom
 							-> reppos
 
-Etape 2:
+_Etape 2:_
 telechargement des fichiers de l'appli via git clone
 
 
-Etape 3:
+_Etape 3:_
 Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs)
 à l'aide de la commande: vim Dockerfile (dans le repertoire souhaité)
 
@@ -31,7 +31,7 @@ Création de deux Dockerfile (afin de créer nos deux images pour nos conteneurs
 		VOLUME ["/var/lib/postgressql/data"]				/* Persistence des données de la base de données (on pourra le verifier a l'etape 6: test)*/
 
 
-Etape 4:
+_Etape 4:_
 Cette étape vas permettre de créer nos deux nouvelles images qui serviront pour nos constructeur, a partir des dockerfile créer précedement
 a l'aide de la commande docker build
 
@@ -39,7 +39,7 @@ $ docker build -t postgres1710 .						/*-t indique un tag , l'image aura pour no
 $ docker build -t tomcat1710 . 							/*-t indique un tag , l'image aura pour nom tomcat1710 */
 
 
-Etape 5:
+_Etape 5:_
 Construction des conteneurs a partir des deux nouvelles images que l'ont vient de creer
 a l'aide de la commande docker run
 
@@ -49,15 +49,20 @@ $ docker run -d --name cnttomcat17102 -p 8888:8080 --link db tomcat1710		/*on cr
 										(db = nom du contructeur de posgres)*/
                     
 
-Etape 6: test
+_Etape 6:_ test
 Pour vérifier aller sur l'adresse indiquer par docker (docker tools), http://192.168.99.100:8888/dbproject/accueil.jsp
 afin de tester le bon fonctionnement de l'appli, entré un article en stock et verifier ca presence.
-afin de verifier la persistence de la bdd, faites un $docker stop cnttomcat17102 et $docker stop db puis $docker start cnttomcat17102 $docker start db et retourner verifier 
-la présence des informations de la base de données dans l'appli (stock de chaussures entré precedement)
+afin de verifier la persistence de la bdd, faites un 
+$docker stop cnttomcat17102 
+$docker stop db 
+puis 
+$docker start cnttomcat17102
+$docker start db 
+et retourner verifier la présence des informations de la base de données dans l'appli (stock de chaussures entré precedement)
 
 
 
-Etape 7: Upload image sur docker hub
+_Etape 7:_ Upload image sur docker hub
 
 $ docker tag postgres1710:latest mvergnes/postgres1710:1.0			/* Modification du Tag en vue de l'upload sur docker hub*/
 $ docker tag tomcat1710:latest mvergnes/tomcat1710:1.0				/* Modification du Tag en vue de l'upload sur docker hub*/
