@@ -1,7 +1,6 @@
-                                                        TP Docker 17/10/2017
-                                                            
-                                                          
-Avant propos:
+### TP Docker 17/10/2017 ###
+                           
+*Avant propos:
 Les etapes 1 à 3 correspondent a la creation des images
 Les etapes 4 à 6 correspondent a la mise en place des containers et au test final
 Etape 7 correspond a comment push sur docker hub
